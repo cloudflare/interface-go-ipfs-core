@@ -43,6 +43,9 @@ type CoreAPI interface {
 	// PubSub returns an implementation of PubSub API
 	PubSub() PubSubAPI
 
+	// Safemode returns an implementation of Safemode API
+	Safemode() SafemodeAPI
+
 	// ResolvePath resolves the path using Unixfs resolver
 	ResolvePath(context.Context, path.Path) (path.Resolved, error)
 
